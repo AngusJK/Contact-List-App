@@ -1,3 +1,2 @@
-class Contact
-
-end
+require_relative 'contact'
+require_relative 'contact_database'
