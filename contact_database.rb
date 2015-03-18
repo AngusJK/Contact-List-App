@@ -1,13 +1,17 @@
 require 'csv'
 
 class ContactDatabase
-
-  def read_contacts
-    # implement me
+  
+  CSV_FILE = 'contacts.csv'
+  
+  def self.read_contacts
+    contacts = CSV.read(CSV_FILE)
   end
 
-  def write_contacts
-    # implement me
+  def self.write_contact(contact) 
+    CSV.open(CSV_FILE, 'w') do |csv_object|
+        csv_object << contact
+      end
   end
 
 end
